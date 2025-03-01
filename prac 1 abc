@@ -1,0 +1,58 @@
+//1aJava Class Constructors: Default, Overloaded, and Copy Constructors
+class MyClass { 
+    private int a; 
+    
+    // Default Constructor
+    public MyClass() { 
+        System.out.println("Default Constructor"); 
+    } 
+    
+    // Overloaded Constructor with a value
+    public MyClass(int val) { 
+        a = val; 
+        System.out.println("This is an Overloaded Constructor with value: " + a); 
+    } 
+    
+    // Copy Constructor
+    public MyClass(MyClass other) { 
+        a = other.a; 
+        System.out.println("Copy Constructor with value: " + a); 
+    } 
+} 
+
+public class MainClass { 
+    public static void main(String[] args) { 
+        // Creating objects using different constructors
+        MyClass obj1 = new MyClass(); // Calls default constructor
+        MyClass obj2 = new MyClass(5); // Calls overloaded constructor with value
+        MyClass obj3 = new MyClass(obj2); // Calls copy constructor
+    } 
+}
+
+
+
+
+
+
+
+//1b
+
+class MethodOver{ 
+   
+  public void Add(int val1,int val2){ 
+    int a=val1+val2; 
+    System.out.println("The addition result is:"+a); 
+  } 
+  public void Add(int val1,int val2,int val3){ 
+    int a=val1+val2+val3; 
+    System.out.println("The addition result is:"+a); 
+  } 
+} 
+public class MainClass{ 
+  public static void main(String args[]){ 
+    MethodOver obj1=new MethodOver(); 
+    obj1.Add(2,5); 
+    MethodOver obj2=new MethodOver(); 
+    obj2.Add(2,5,3); 
+  } 
+} 
